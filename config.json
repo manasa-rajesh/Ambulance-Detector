@@ -1,0 +1,37 @@
+{
+    "model" : {
+        "backend":              "Tiny Yolo",
+        "input_size":           416,
+        "anchors":              [73,85, 163,134, 195,197, 228,334, 347,233],
+        "max_box_per_image":    5,        
+        "labels":               ["Ambulance"]
+    },
+
+    "train": {
+        "train_image_folder":   "/content/gdrive/My Drive/Colab Notebooks/keras-yolo2-master/train_image_folder/",
+        "train_annot_folder":   "/content/gdrive/My Drive/Colab Notebooks/keras-yolo2-master/train_annot_folder/",     
+          
+        "train_times":          8,
+		"cache_name":           "xyz.pkl",
+        "pretrained_weights":   "",
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epochs":            100,
+        "warmup_epochs":        3,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "Ambulance2.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "/content/gdrive/My Drive/Colab Notebooks/keras-yolo2-master/valid_image_folder/",
+        "valid_annot_folder":   "/content/gdrive/My Drive/Colab Notebooks/keras-yolo2-master/valid_annot_folder/",
+
+        "valid_times":          1
+    }
+}
